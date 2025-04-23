@@ -1,9 +1,14 @@
-import { Header } from '@myApp/header';
-
+import './index.css';
 export function LandingPage() {
 	return (
-		<section className='page'>
-			<h1>Landing Page</h1>
-		</section>
+		<main className='landing-page'>
+			<h1 className='landing-page__title'>
+				Welcome to the Shakespearean Insult Generator!
+			</h1>
+			<p className='landing-page__text'>
+				Here you can enjoy a selection of famous insults made by
+				Shakespear.
+			</p>
+		</main>
 	);
 }
