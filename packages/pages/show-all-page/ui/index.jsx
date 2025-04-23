@@ -1,3 +1,3 @@
-export function ShowAll() {
-	return <section className='page'>ShowAll</section>;
+export function ShowAllPage() {
+	return <section className='page'>ShowAllPage</section>;
 }

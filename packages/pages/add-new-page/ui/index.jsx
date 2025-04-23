@@ -1,3 +1,3 @@
-export function AddNew() {
-	return <section className='page'>AddNew</section>;
+export function AddNewPage() {
+	return <section className='page'>AddNewPage</section>;
 }
