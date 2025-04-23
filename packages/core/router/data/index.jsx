@@ -3,28 +3,44 @@ import { LandingPage } from '@myApp/landing-page';
 import { ShowRandomPage } from '@myApp/show-random-page';
 import { ShowAllPage } from '@myApp/show-all-page';
 import { AddNewPage } from '@myApp/add-new-page';
+import { Outlet } from 'react-router-dom';
+import { Header } from '@myApp/header';
+
+function Layout() {
+	return (
+		<>
+			<Header />
+			<Outlet />
+		</>
+	);
+}
 
 export const router = createBrowserRouter([
 	{
-		path: '/',
-		element: <LandingPage />,
+		element: <Layout />,
 		errorElement: (
 			<h1>
 				Oops! This page doesn't seem to exist. Try and check your
 				spelling.
 			</h1>
 		),
-	},
-	{
-		path: '/show-random',
-		element: <ShowRandomPage />,
-	},
-	{
-		path: '/show-all',
-		element: <ShowAllPage />,
-	},
-	{
-		path: '/add-new',
-		element: <AddNewPage />,
+		children: [
+			{
+				path: '/',
+				element: <LandingPage />,
+			},
+			{
+				path: '/show-random',
+				element: <ShowRandomPage />,
+			},
+			{
+				path: '/show-all',
+				element: <ShowAllPage />,
+			},
+			{
+				path: '/add-new',
+				element: <AddNewPage />,
+			},
+		],
 	},
 ]);
