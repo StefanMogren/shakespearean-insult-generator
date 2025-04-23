@@ -8,10 +8,10 @@ import { Header } from '@myApp/header';
 
 function Layout() {
 	return (
-		<>
+		<section className='wrapper'>
 			<Header />
 			<Outlet />
-		</>
+		</section>
 	);
 }
 
